@@ -496,7 +496,7 @@ refactor: 代码重构
 
 - **维护者**: Ethan
 - **邮箱**: 990151152@qq.com
-- **GitHub**: https://github.com/yourusername/email-assistant
+- **GitHub**: https://github.com/Ethan2988/email-assistant
 
 ---
 
