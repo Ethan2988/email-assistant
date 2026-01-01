@@ -1,0 +1,19 @@
+llm:
+  model: "deepseek-chat"
+  api_key: "sk-cebxxxxxx"
+
+email:
+  email_sender: "qq_email@qq.com"
+  auth_code: "xxxxx"
+  smtp_server: "smtp.qq.com"
+  smtp_port: 465
+  imap_server: "imap.qq.com"
+  imap_port: 993
+  
+
+master:
+  master_email: "master_@163.com"
+  master_name: "master_name"
+
+
+

@@ -1,0 +1,60 @@
+[project]
+name = "email-assistant"
+version = "0.1.0"
+description = "AI-powered email assistant for automated email sending and management"
+readme = "README.md"
+authors = [
+    { name = "Ethan", email = "ethan2088@foxmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "langgraph",
+    "langchain",
+    "imaplib2",
+    "python-dotenv",
+    "sqlalchemy",
+    "chardet",
+    "pyyaml",
+    "email-validator",
+    "apscheduler",
+    "langsmith",
+    "langchain-deepseek",
+    "langchain[openai]",
+    "chardet"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-mock>=3.10.0",
+    "pytest-cov>=4.0.0",
+    "pytest-asyncio>=0.21.0"
+]
+
+[project.scripts]
+email-assistant = "email_assistant:main.main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "-v",
+    "--tb=short",
+    "--strict-markers",
+    "--disable-warnings",
+    "--cov=src/email_assistant",
+    "--cov-report=term-missing",
+    "--cov-report=html:htmlcov",
+    "--cov-fail-under=80"
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+    "unit: marks tests as unit tests"
+]
+
+[build-system]
+requires = ["uv_build>=0.9.3,<0.10.0"]
+build-backend = "uv_build"
